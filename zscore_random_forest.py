@@ -66,15 +66,6 @@ def random_forest(path, lang):
   model.fit(X_train_scaled, Y_train)
 
   result = model.score(X_test_scaled, Y_test)
-
-  title_options = [("Confusion Matrix, without normalization", None), ("Normalization: true", "true"), 
-                    ("Normalization: pred", "pred"), ("Normalization: all", "all")]
-  for title, normalize in title_options:
-    disp = ConfusionMatrixDisplay.from_estimator(model, X_test_scaled, Y_test, display_labels=["bot", "human"], 
-                                          cmap=plt.cm.Blues, normalize=normalize)
-    file_path = r'D:/users/Mmile/Documents/CS/file-{}-{}.png'.format(normalize, lang)
-    disp.ax_.set_title(title)
-    #plt.savefig(file_path)
   return result
 
 def logisticRegression(path):
