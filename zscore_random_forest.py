@@ -66,6 +66,7 @@ def random_forest(path, lang):
   model.fit(X_train_scaled, Y_train)
 
   result = model.score(X_test_scaled, Y_test)
+
   return result
 
 def logisticRegression(path):
