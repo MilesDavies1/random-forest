@@ -82,5 +82,5 @@ remove_outliers(0.9516932907348243, english, english_no_outliers)
 random_forest(english_no_outliers, "eng")
 
 # confusion matrix figures for non english accounts
-remove_outliers(9129954376960365, universal, universal_no_outliers)
+remove_outliers(0.9129954376960365, universal, universal_no_outliers)
 random_forest(universal_no_outliers, "univ")
